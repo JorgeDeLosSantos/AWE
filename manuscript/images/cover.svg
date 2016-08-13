@@ -5677,9 +5677,9 @@
          id="feBlend9439" />
     </filter>
     <filter
-       inkscape:label="Cubes"
-       inkscape:menu="Scatter"
-       inkscape:menu-tooltip="Scattered cubes; adjust the Morphology primitive to vary size"
+       inkscape:label="Lizard Skin"
+       inkscape:menu="Materials"
+       inkscape:menu-tooltip="Stylized reptile skin texture"
        style="color-interpolation-filters:sRGB;"
        id="filter7318">
       <feTurbulence
@@ -5730,12 +5730,98 @@
          targetY="1"
          divisor="2"
          edgeMode="duplicate"
-         id="feConvolveMatrix7334" />
+         id="feConvolveMatrix7334"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4645" />
+      <feGaussianBlur
+         id="feGaussianBlur4647"
+         stdDeviation="0.5"
+         in="fbSourceGraphic"
+         result="result0" />
+      <feTurbulence
+         id="feTurbulence4649"
+         result="result1"
+         numOctaves="1"
+         seed="488"
+         baseFrequency="0.095"
+         type="turbulence" />
+      <feComposite
+         id="feComposite4651"
+         in2="result1"
+         in="result0"
+         operator="in"
+         result="result2" />
+      <feComposite
+         id="feComposite4653"
+         in2="result2"
+         operator="arithmetic"
+         in="result4"
+         k3="1"
+         k1="3"
+         result="result91" />
+      <feBlend
+         id="feBlend4655"
+         in2="result91"
+         mode="multiply"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix4658"
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 5 0" />
+      <feGaussianBlur
+         id="feGaussianBlur4660"
+         result="result0"
+         in="fbSourceGraphicAlpha"
+         stdDeviation="3" />
+      <feOffset
+         id="feOffset4662"
+         result="result3"
+         in="result0"
+         dy="2"
+         dx="2" />
+      <feSpecularLighting
+         id="feSpecularLighting4664"
+         specularExponent="30"
+         specularConstant="1.1"
+         surfaceScale="2"
+         lighting-color="rgb(111,236,253)"
+         result="result1"
+         in="result0">
+        <fePointLight
+           id="fePointLight4666"
+           z="20000"
+           y="-10000"
+           x="-5000" />
+      </feSpecularLighting>
+      <feComposite
+         id="feComposite4668"
+         in2="fbSourceGraphicAlpha"
+         k2="-1"
+         operator="in"
+         result="result2"
+         in="result1" />
+      <feComposite
+         id="feComposite4670"
+         in2="result2"
+         k3="1"
+         k2="3"
+         operator="arithmetic"
+         result="result4"
+         in="fbSourceGraphic" />
+      <feBlend
+         id="feBlend4672"
+         in2="result4"
+         mode="multiply" />
     </filter>
     <filter
-       inkscape:label="Cubes"
-       inkscape:menu="Scatter"
-       inkscape:menu-tooltip="Scattered cubes; adjust the Morphology primitive to vary size"
+       inkscape:label="Lizard Skin"
+       inkscape:menu="Materials"
+       inkscape:menu-tooltip="Stylized reptile skin texture"
        style="color-interpolation-filters:sRGB;"
        id="filter7336">
       <feTurbulence
@@ -5786,12 +5872,98 @@
          targetY="1"
          divisor="2"
          edgeMode="duplicate"
-         id="feConvolveMatrix7352" />
+         id="feConvolveMatrix7352"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4674" />
+      <feGaussianBlur
+         id="feGaussianBlur4676"
+         stdDeviation="0.5"
+         in="fbSourceGraphic"
+         result="result0" />
+      <feTurbulence
+         id="feTurbulence4678"
+         result="result1"
+         numOctaves="1"
+         seed="488"
+         baseFrequency="0.095"
+         type="turbulence" />
+      <feComposite
+         id="feComposite4680"
+         in2="result1"
+         in="result0"
+         operator="in"
+         result="result2" />
+      <feComposite
+         id="feComposite4682"
+         in2="result2"
+         operator="arithmetic"
+         in="result4"
+         k3="1"
+         k1="3"
+         result="result91" />
+      <feBlend
+         id="feBlend4684"
+         in2="result91"
+         mode="multiply"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix4686"
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 5 0" />
+      <feGaussianBlur
+         id="feGaussianBlur4688"
+         result="result0"
+         in="fbSourceGraphicAlpha"
+         stdDeviation="3" />
+      <feOffset
+         id="feOffset4690"
+         result="result3"
+         in="result0"
+         dy="2"
+         dx="2" />
+      <feSpecularLighting
+         id="feSpecularLighting4692"
+         specularExponent="30"
+         specularConstant="1.1"
+         surfaceScale="2"
+         lighting-color="rgb(111,236,253)"
+         result="result1"
+         in="result0">
+        <fePointLight
+           id="fePointLight4694"
+           z="20000"
+           y="-10000"
+           x="-5000" />
+      </feSpecularLighting>
+      <feComposite
+         id="feComposite4696"
+         in2="fbSourceGraphicAlpha"
+         k2="-1"
+         operator="in"
+         result="result2"
+         in="result1" />
+      <feComposite
+         id="feComposite4698"
+         in2="result2"
+         k3="1"
+         k2="3"
+         operator="arithmetic"
+         result="result4"
+         in="fbSourceGraphic" />
+      <feBlend
+         id="feBlend4700"
+         in2="result4"
+         mode="multiply" />
     </filter>
     <filter
-       inkscape:label="Cubes"
-       inkscape:menu="Scatter"
-       inkscape:menu-tooltip="Scattered cubes; adjust the Morphology primitive to vary size"
+       inkscape:label="Lizard Skin"
+       inkscape:menu="Materials"
+       inkscape:menu-tooltip="Stylized reptile skin texture"
        style="color-interpolation-filters:sRGB;"
        id="filter7354">
       <feTurbulence
@@ -5842,7 +6014,93 @@
          targetY="1"
          divisor="2"
          edgeMode="duplicate"
-         id="feConvolveMatrix7370" />
+         id="feConvolveMatrix7370"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix4702" />
+      <feGaussianBlur
+         id="feGaussianBlur4704"
+         stdDeviation="0.5"
+         in="fbSourceGraphic"
+         result="result0" />
+      <feTurbulence
+         id="feTurbulence4706"
+         result="result1"
+         numOctaves="1"
+         seed="488"
+         baseFrequency="0.095"
+         type="turbulence" />
+      <feComposite
+         id="feComposite4708"
+         in2="result1"
+         in="result0"
+         operator="in"
+         result="result2" />
+      <feComposite
+         id="feComposite4710"
+         in2="result2"
+         operator="arithmetic"
+         in="result4"
+         k3="1"
+         k1="3"
+         result="result91" />
+      <feBlend
+         id="feBlend4712"
+         in2="result91"
+         mode="multiply"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="feColorMatrix4714"
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 5 0" />
+      <feGaussianBlur
+         id="feGaussianBlur4716"
+         result="result0"
+         in="fbSourceGraphicAlpha"
+         stdDeviation="3" />
+      <feOffset
+         id="feOffset4718"
+         result="result3"
+         in="result0"
+         dy="2"
+         dx="2" />
+      <feSpecularLighting
+         id="feSpecularLighting4720"
+         specularExponent="30"
+         specularConstant="1.1"
+         surfaceScale="2"
+         lighting-color="rgb(111,236,253)"
+         result="result1"
+         in="result0">
+        <fePointLight
+           id="fePointLight4722"
+           z="20000"
+           y="-10000"
+           x="-5000" />
+      </feSpecularLighting>
+      <feComposite
+         id="feComposite4724"
+         in2="fbSourceGraphicAlpha"
+         k2="-1"
+         operator="in"
+         result="result2"
+         in="result1" />
+      <feComposite
+         id="feComposite4726"
+         in2="result2"
+         k3="1"
+         k2="3"
+         operator="arithmetic"
+         result="result4"
+         in="fbSourceGraphic" />
+      <feBlend
+         id="feBlend4728"
+         in2="result4"
+         mode="multiply" />
     </filter>
     <filter
        inkscape:label="Rough and Glossy"
@@ -7702,9 +7960,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.12374369"
-     inkscape:cx="2062.6125"
-     inkscape:cy="1921.4139"
+     inkscape:zoom="0.175"
+     inkscape:cx="1653.8661"
+     inkscape:cy="1723.9779"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -7812,7 +8070,7 @@
            x="266.68027"
            y="544.30396"
            style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" /></flowRegion><flowPara
-         id="flowPara6260"></flowPara></flowRoot>    <flowRoot
+         id="flowPara6260" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot6262"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:2.5px;line-height:125%;letter-spacing:0px;word-spacing:0px"><flowRegion
@@ -7823,19 +8081,19 @@
            x="-1511.1881"
            y="83.674385"
            style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" /></flowRegion><flowPara
-         id="flowPara6268"></flowPara></flowRoot>    <text
+         id="flowPara6268" /></flowRoot>    <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:70.86572266px;line-height:87.00000048%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:100000;stroke-opacity:1;filter:url(#filter7408)"
        x="215.00323"
        y="-1233.854"
        id="text6270"
        sodipodi:linespacing="87%"
-       transform="matrix(0.62852459,0,0,1.1956445,206.07461,-360.0439)"><tspan
+       transform="matrix(0.76403215,0,0,1.3587383,209.06932,-123.887)"><tspan
          sodipodi:role="line"
          id="tspan6272"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:283.46289063px;line-height:87.00000048%;font-family:ChunkFive;-inkscape-font-specification:ChunkFive;fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
          x="215.00323"
-         y="-1233.854">Aprendiendo wxPython </tspan><tspan
+         y="-1233.854">Aprende wxPython </tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:283.46289063px;line-height:87.00000048%;font-family:ChunkFive;-inkscape-font-specification:ChunkFive;fill:#ffffff;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
          x="215.00323"
@@ -7874,46 +8132,46 @@
        y="-2260.938" />
     <g
        id="g8080"
-       style="fill:#217844;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
-       transform="matrix(0,-0.62937648,0.62937648,0,-458.59528,-1277.0897)">
+       style="fill:#808080;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
+       transform="matrix(0,-0.62937648,0.62937648,0,-458.59528,-1331.0897)">
       <text
          transform="scale(0.89769162,1.1139683)"
          sodipodi:linespacing="125%"
          id="text7460"
          y="862.87708"
          x="-1709.9474"
-         style="font-style:normal;font-weight:normal;font-size:70.04125214px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#217844;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:100000;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;font-size:70.04125214px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:100000;stroke-opacity:1"
          xml:space="preserve"><tspan
            id="tspan7464"
            y="862.87708"
            x="-1709.9474"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:140.08250427px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';fill:#217844;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:140.08250427px;font-family:Cantarell;-inkscape-font-specification:'Cantarell Bold';fill:#808080;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
            sodipodi:role="line">LARYSA-TECH</tspan></text>
       <g
-         style="fill:#217844;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
+         style="fill:#808080;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
          inkscape:label="Layer 1"
          id="layer1-9"
          transform="matrix(1.1021307,0,0,1.1021307,-2984.4674,-95.345765)">
         <g
            id="g4489"
            transform="matrix(0.49258549,0,0,0.49258549,1036.6116,498.35196)"
-           style="fill:#217844;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
+           style="fill:#808080;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000">
           <path
              inkscape:connector-curvature="0"
              id="path4033-8"
              d="m 299.9396,737.29429 c -23.25445,0.35906 -46.73617,6.87875 -67.86178,20.16582 -0.43693,0.27482 -0.87509,0.54682 -1.30768,0.82591 46.19475,-21.95767 102.52105,-6.37235 130.42402,37.99159 29.42013,46.77613 16.43335,108.48576 -29.38843,139.37131 l -2.753,1.78945 c -47.84335,30.09135 -111.00061,15.70192 -141.09195,-32.14143 -11.2048,-17.81491 -16.25298,-37.76405 -15.69218,-57.33151 -4.8863,30.41427 0.82479,62.65588 18.51401,90.78063 38.65332,61.45634 119.82961,79.94854 181.28595,41.2952 l 3.44126,-2.27123 C 434.3694,938.09655 451.15486,858.84079 413.36377,798.75532 387.99751,758.42459 344.33443,736.60881 299.9396,737.29429 Z"
-             style="fill:#217844;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+             style="fill:#808080;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
           <path
              inkscape:connector-curvature="0"
              id="path3245"
              d="m 279.34286,688.66369 c -20.86215,0.31424 -42.00594,4.73217 -62.29861,13.67791 -81.17073,35.78297 -117.957305,130.59647 -82.17433,211.7672 l 2.43103,5.28951 c 34.2786,70.67763 113.81865,105.17499 187.40342,84.71219 -61.29554,11.3315 -124.72941,-19.02776 -153.07507,-77.47252 l -2.16388,-4.67507 c -31.55031,-71.56928 0.8809,-155.18524 72.45019,-186.73555 71.56928,-31.55031 155.18524,0.90762 186.73555,72.4769 9.77462,22.17292 13.39114,45.49278 11.62088,68.06899 5.01233,-29.85724 1.66452,-61.48408 -11.46059,-91.25732 -26.83723,-60.87805 -86.88213,-96.79498 -149.46859,-95.85224 z"
-             style="fill:#217844;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
+             style="fill:#808080;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
           <g
              transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,685.4674,59.896399)"
-             style="fill:#217844;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
+             style="fill:#808080;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
              id="g4484">
             <rect
-               style="fill:#217844;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
+               style="fill:#808080;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
                id="rect4442"
                width="144.95168"
                height="8.0812197"
@@ -7922,7 +8180,7 @@
                ry="3.1955297"
                transform="matrix(0,-1,1,0,0,0)" />
             <rect
-               style="fill:#217844;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
+               style="fill:#808080;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
                id="rect4442-1"
                width="144.95168"
                height="8.0812197"
@@ -7931,7 +8189,7 @@
                ry="3.1955297"
                transform="matrix(0,-1,1,0,0,0)" />
             <rect
-               style="fill:#217844;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
+               style="fill:#808080;fill-opacity:1;stroke:none;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000"
                id="rect4442-2"
                width="144.95168"
                height="8.0812197"
@@ -7943,5 +8201,56 @@
         </g>
       </g>
     </g>
+    <image
+       y="852.96936"
+       x="36.214268"
+       id="image4695"
+       xlink:href="data:image/png;base64,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
+"
+       preserveAspectRatio="none"
+       height="92.499992"
+       width="132.14285"
+       style="stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000" />
   </g>
 </svg>

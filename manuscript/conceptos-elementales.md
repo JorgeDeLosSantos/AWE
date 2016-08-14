@@ -36,7 +36,7 @@ error como el que se muestra enseguida:
         _windows_.Frame_swiginit(self,_windows_.new_Frame(*args, **kwargs))
     wx._core.PyNoAppError: The wx.App object must be created first!
 
-[wxapp]: https://wxpython.org/docs/api/wx.App-class.html
+[^wxapp]: https://wxpython.org/docs/api/wx.App-class.html
 
 
 ## Con clase

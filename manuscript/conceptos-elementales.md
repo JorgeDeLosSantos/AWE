@@ -46,13 +46,14 @@ todos los controles que componen una interfaz gráfica. Para instanciar un objet
 proporcionada por wxPython, respecto al constructor de `wx.Frame`:
 
 {linenos=off}
-  >>> help(wx.Frame.__init__)
-  Help on method __init__ in module wx._windows:
+    >>> help(wx.Frame.__init__)
+    Help on method __init__ in module wx._windows:
 
-  __init__(self, *args, **kwargs) unbound wx._windows.Frame method
+    __init__(self, *args, **kwargs) unbound wx._windows.Frame method
       __init__(self, Window parent, int id=-1, String title=EmptyString, 
           Point pos=DefaultPosition, Size size=DefaultSize, 
           long style=DEFAULT_FRAME_STYLE, String name=FrameNameStr) -> Frame
+
 
 wxPython nos *dice* que necesitamos especificar al menos el argumento `parent`, que es 
 el *objeto padre* del Frame. En el ejemplo utilizado hemos pasado `None` como argumento, 
@@ -63,7 +64,10 @@ hemos pasado, además de `parent`, un `id` y un título (string que se muestra e
 superior de la ventana). Si quisiera especificar un tamaño inicial al Frame podría incluirse 
 el argumento `size` como sigue:
 
+
+{linenos=off}
     frame = wx.Frame(None, wx.ID_ANY, u"wxPython Demo", size=(300,200))
+
 
 El método `Show` de la clase `wx.Frame` se utiliza para mostrar en pantalla la ventana que hemos 
 creado y todos los elementos que pudiera contener, si no *llamamos* a `Show` la ventana no 

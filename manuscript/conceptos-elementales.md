@@ -13,6 +13,8 @@ Una aplicación muy básica en wxPython puede construirse con unas pocas líneas
     frame.Show()
     app.MainLoop()
 
+![Imagen 01](images/conceptos-elementales/primera_aplicacion.png)
+
 Primero, y como siempre, importamos la librería wxPython para poder utilizar 
 las clases y funciones disponibles en esta. 
 
@@ -24,7 +26,7 @@ Cada aplicación debe tener una instancia `wx.App`, y esta debe crearse antes de
 instanciar cualquier otro objeto gráfico de wxPython, para asegurar que el 
 sistema de wxWidgets se ha inicializado correctamente [^wxapp]. Es más, si en el ejemplo 
 anterior intenta inicializar el Frame antes de `wx.App`, entonces wxPython lanzará un 
-error como el que se muestra enseguida:
+error como el que se muestra enseguida (*el cual es bastante explícito*):
 
 {linenos=off}
     Traceback (most recent call last):

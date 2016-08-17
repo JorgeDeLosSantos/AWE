@@ -40,6 +40,35 @@ error como el que se muestra enseguida (*el cual es bastante explícito*):
 
 [^wxapp]: https://wxpython.org/docs/api/wx.App-class.html
 
+Con la clase `wx.Frame` creamos un objeto de tipo **ventana**, que es donde colocaremos 
+todos los controles que componen una interfaz gráfica. Para instanciar un objeto de la clase 
+`wx.Frame`, necesitamos pasar algunos argumentos, por ejemplo, si recurrimos a la ayuda 
+proporcionada por wxPython, respecto al constructor de `wx.Frame`:
+
+{linenos=off}
+  >>> help(wx.Frame.__init__)
+  Help on method __init__ in module wx._windows:
+
+  __init__(self, *args, **kwargs) unbound wx._windows.Frame method
+      __init__(self, Window parent, int id=-1, String title=EmptyString, 
+          Point pos=DefaultPosition, Size size=DefaultSize, 
+          long style=DEFAULT_FRAME_STYLE, String name=FrameNameStr) -> Frame
+
+wxPython nos *dice* que necesitamos especificar al menos el argumento `parent`, que es 
+el *objeto padre* del Frame. En el ejemplo utilizado hemos pasado `None` como argumento, 
+para indicar que nuestro objeto frame no tiene un objeto padre. Note que además de 
+`parent`se puede especificar un `id`, un título (`title`), la posición (`position`), 
+el tamaño (`size`), el estilo (`style`) y un nombre (`name`). En nuestro caso 
+hemos pasado, además de `parent`, un `id` y un título (string que se muestra en la parte 
+superior de la ventana). Si quisiera especificar un tamaño inicial al Frame podría incluirse 
+el argumento `size` como sigue:
+
+    frame = wx.Frame(None, wx.ID_ANY, u"wxPython Demo", size=(300,200))
+
+El método `Show` de la clase `wx.Frame` se utiliza para mostrar en pantalla la ventana que hemos 
+creado y todos los elementos que pudiera contener, si no *llamamos* a `Show` la ventana no 
+se dibujará en la pantalla. Luego, el método `MainLoop` de `wx.App` es el que *pone en funcionamiento* 
+toda la maquinaria de wxPython, lista para recibir y manejar los eventos generados.
 
 ## Con clase
 

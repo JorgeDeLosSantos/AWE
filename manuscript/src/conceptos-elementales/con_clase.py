@@ -2,8 +2,8 @@
 import wx
 
 class MiFrame(wx.Frame):
-    def __init__(self,parent,title):
-        wx.Frame.__init__(self,parent=parent,id=wx.ID_ANY,title=title)
+    def __init__(self,parent,**kwargs):
+        wx.Frame.__init__(self,parent=parent,**kwargs)
         self.Show()
 
 class App(wx.App):
@@ -13,6 +13,6 @@ class App(wx.App):
 
 
 if __name__=='__main__':
-    app = App()
-    frame = MiFrame(None, u"wxFrame Demo")
+    app = wx.App()
+    frame = MiFrame(None, title=u"wxFrame Demo")
     app.MainLoop()

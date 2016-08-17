@@ -76,4 +76,33 @@ toda la maquinaria de wxPython, lista para recibir y manejar los eventos generad
 
 ## Con clase
 
-Bla bla bla 
+En la sección anterior vimos como desarrollar una aplicación wxPython muy elemental, con unas 
+cuantas líneas de código. Todo esto está muy bien, pero cuando querramos desarrollar una 
+aplicación un poco más compleja vamos a tener muchos problemas con ese mismo enfoque. 
+Además, cuando se requiera programar las respuestas a los eventos, se necesita mucho 
+intercambio de información entre el objeto que lanza el evento y las funciones o rutinas 
+que los manejan (handlers), y de esa manera, aun con la ayuda de las funciones es un tanto 
+difícil mantener el código legible.
+
+Debido a lo comentado en el párrafo anterior, las aplicaciones en wxPyhon comúnmente 
+se desarrollan utilizando un diseño orientado a objetos, donde, típicamente se escriben 
+clases heredadas de los controles gráficos de wxPython.
+
+Lo más común, es crear una clase que herede de wx.Frame, y en esta ir agregando todos 
+los controles gráficos que necesitemos para que la aplicación sea funcional.
+
+
+    import wx
+
+    class MiFrame(wx.Frame):
+        def __init__(self,parent,**kwargs):
+            wx.Frame.__init__(self,parent=parent,**kwargs)
+            self.Show()
+
+
+    if __name__=='__main__':
+        app = wx.App()
+        frame = MiFrame(None, title=u"wxFrame Demo")
+        app.MainLoop()
+
+

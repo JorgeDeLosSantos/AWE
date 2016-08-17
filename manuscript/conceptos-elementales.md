@@ -74,6 +74,7 @@ creado y todos los elementos que pudiera contener, si no *llamamos* a `Show` la 
 se dibujará en la pantalla. Luego, el método `MainLoop` de `wx.App` es el que *pone en funcionamiento* 
 toda la maquinaria de wxPython, lista para recibir y manejar los eventos generados.
 
+
 ## Con clase
 
 En la sección anterior vimos como desarrollar una aplicación wxPython muy elemental, con unas 
@@ -88,7 +89,7 @@ Debido a lo comentado en el párrafo anterior, las aplicaciones en wxPyhon comú
 se desarrollan utilizando un diseño orientado a objetos, donde, típicamente se escriben 
 clases heredadas de los controles gráficos de wxPython.
 
-Lo más común, es crear una clase que herede de wx.Frame, y en esta ir agregando todos 
+Lo más común, es crear una clase que herede de `wx.Frame`, y en esta ir agregando todos 
 los controles gráficos que necesitemos para que la aplicación sea funcional.
 
 
@@ -99,10 +100,29 @@ los controles gráficos que necesitemos para que la aplicación sea funcional.
             wx.Frame.__init__(self,parent=parent,**kwargs)
             self.Show()
 
-
     if __name__=='__main__':
         app = wx.App()
         frame = MiFrame(None, title=u"wxFrame Demo")
         app.MainLoop()
 
 
+Primero, definimos una clase MiFrame heredada de wx.Frame, agregamos el método __init__ que 
+para efectos de este texto será nuestro constructor de la clase, y aquí en __init__ es 
+necesario llamar también al método __init__ de la superclase, pasándole como argumentos 
+aquellos que hemos recibido desde el constructor de nuestra clase MiFrame. Note que, debido 
+a la sintaxis de Python, el parámetro self será siempre el primer argumento del método __init__ 
+de la clase y superclase. Dentro del método __init__ habrán de agregarse todos los controles 
+(que veremos en la siguiente entrega) y hacer las conexiones de eventos requeridas. 
+El método `Show` sirve, claro está, para mostrar el Frame en la pantalla.
+
+Para llamar al método __init__ de la superclase, también puede utilizar la otra 
+notación que implica el uso de super, algo como:
+
+
+{linenos=off}
+    super(MiFrame, self).__init__(*args,**kwargs)
+
+
+Finalmente, lo único que hacemos es instanciar un objeto de la clase MiFrame, con los mismos 
+argumentos que utilizaríamos para uno de wx.Frame. Y bueno, lo de la clase wx.App ya nos lo 
+sabemos, puesto que lo hemos visto en la sección anterior.

@@ -1,3 +1,4 @@
 intro.md
 conceptos-elementales.md
+sizers.md
 controles-basicos.md

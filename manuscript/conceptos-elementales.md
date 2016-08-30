@@ -106,16 +106,16 @@ los controles gráficos que necesitemos para que la aplicación sea funcional.
         app.MainLoop()
 
 
-Primero, definimos una clase MiFrame heredada de wx.Frame, agregamos el método __init__ que 
-para efectos de este texto será nuestro constructor de la clase, y aquí en __init__ es 
-necesario llamar también al método __init__ de la superclase, pasándole como argumentos 
+Primero, definimos una clase MiFrame heredada de wx.Frame, agregamos el método `__init__` que 
+para efectos de este texto será nuestro constructor de la clase, y aquí en `__init__` es 
+necesario llamar también al método `__init__` de la superclase, pasándole como argumentos 
 aquellos que hemos recibido desde el constructor de nuestra clase MiFrame. Note que, debido 
-a la sintaxis de Python, el parámetro self será siempre el primer argumento del método __init__ 
-de la clase y superclase. Dentro del método __init__ habrán de agregarse todos los controles 
+a la sintaxis de Python, el parámetro self será siempre el primer argumento del método `__init__` 
+de la clase y superclase. Dentro del método `__init__` habrán de agregarse todos los controles 
 (que veremos en la siguiente entrega) y hacer las conexiones de eventos requeridas. 
 El método `Show` sirve, claro está, para mostrar el Frame en la pantalla.
 
-Para llamar al método __init__ de la superclase, también puede utilizar la otra 
+Para llamar al método `__init__` de la superclase, también puede utilizar la otra 
 notación que implica el uso de super, algo como:
 
 
@@ -123,6 +123,6 @@ notación que implica el uso de super, algo como:
     super(MiFrame, self).__init__(*args,**kwargs)
 
 
-Finalmente, lo único que hacemos es instanciar un objeto de la clase MiFrame, con los mismos 
-argumentos que utilizaríamos para uno de wx.Frame. Y bueno, lo de la clase wx.App ya nos lo 
+Finalmente, lo único que hacemos es instanciar un objeto de la clase `MiFrame`, con los mismos 
+argumentos que utilizaríamos para uno de `wx.Frame`. Y bueno, lo de la clase `wx.App` ya nos lo 
 sabemos, puesto que lo hemos visto en la sección anterior.
